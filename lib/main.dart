@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Quiz risk',
+        title: 'Medical',
         theme: ThemeData(
             scaffoldBackgroundColor: Color(0xFFD1CCC9),
             primaryColor: Colors.indigo[900],
