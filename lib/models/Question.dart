@@ -47,6 +47,50 @@ class QuestionData {
       Answer(title: 'Три и более предрасполагающих факторов', ball: 4),
     ]),
   ];
+  List<Question> get questions => [..._data];
+}
 
+class MorseScaleDate {
+  final _data = [
+    Question(title: '1. Падал ли пациент в последние 3 мес?', answers: [
+      Answer(title: 'да', ball: 25),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(title: '2. Есть ли сопутствующее заболевание?', answers: [
+      Answer(title: 'да', ball: 15),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(title: '3. Самостоятельность при ходьбе', answers: [
+      Answer(
+          title:
+              'ходит сам (даже если при помощи кого-то), или строгий постельный режим, неподвижно лежит',
+          ball: 0),
+      Answer(title: 'костыли/ходунки/трость', ball: 14),
+      Answer(title: 'опирается о мебель или стены для поддержки', ball: 30),
+    ]),
+    Question(
+        title:
+            '4. Принимает внутривенное вливание/принимает гепарин, фраксипарин',
+        answers: [
+          Answer(title: 'да', ball: 25),
+          Answer(title: 'нет', ball: 0),
+        ]),
+    Question(title: '5. Походка', answers: [
+      Answer(title: 'нормальная (ходит свободно)', ball: 0),
+      Answer(
+          title:
+              'слегка несвободная (ходит с остановками, шаги короткие, иногда с задержкой)',
+          ball: 10),
+      Answer(
+          title: 'нарушения (не может встать, ходит опираясь, смотрит вниз)',
+          ball: 20),
+    ]),
+    Question(title: '6. Психическое состояние', answers: [
+      Answer(title: 'знает о своей способности двигаться', ball: 0),
+      Answer(
+          title: 'не знает или забывает, что нужна помощь при движении',
+          ball: 15),
+    ]),
+  ];
   List<Question> get questions => [..._data];
 }

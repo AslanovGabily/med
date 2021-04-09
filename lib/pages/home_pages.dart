@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final QuestionData data = QuestionData();
+  final MorseScaleDate data = MorseScaleDate();
   int _countResult = 0;
   int _questionIndex = 0;
   var _icon = Icons.brightness_1;
@@ -37,11 +37,24 @@ class _HomePageState extends State<HomePage> {
         }
         _questionIndex++;
       });
+
+  void _onChangeMorseAnswer(int mark) => setState(() {
+        if (mark < 15) {
+          _icons.add(Icon(_icon, color: Colors.green));
+          _countResult += mark;
+        } else if (mark >= 15) {
+          _icons.add(Icon(_icon, color: Colors.red));
+          _countResult += mark;
+        }
+        _questionIndex++;
+      });
 // RaisedButton(onPressed: () => setState(() => _questionIndex++))
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Шкала оценки рисков')),
+      appBar: AppBar(title: Text('Шкала падения Морзе')),
+      //appBar: AppBar(title: Text('Шкала падения Морзе Шкала оценки рисков')),
+
       body: Container(
         constraints: BoxConstraints.expand(),
         decoration: BoxDecoration(
@@ -61,9 +74,9 @@ class _HomePageState extends State<HomePage> {
                 ? Quiz(
                     index: _questionIndex,
                     questionData: data,
-                    onChangaAnswer: _onChangeAnswer,
+                    onChangaAnswer: _onChangeMorseAnswer,
                   )
-                : Result(total: _countResult, onClearState: _clearState)
+                : ResultMorse(total: _countResult, onClearState: _clearState)
           ],
         ),
       ),
