@@ -73,7 +73,7 @@ class Result extends StatelessWidget {
 class ResultMorse extends StatelessWidget {
   int total;
   final Function onClearState;
-  ResultMorse({Key key, this.total, this.onClearState}) : super(key: key) {}
+  ResultMorse({Key key, this.total, this.onClearState}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -55,6 +55,11 @@ flutter:
     - assets/images/normal.png
     - assets/images/badboy.png
     - assets/images/good.png
+    - assets/images/docIntro.jpeg
+    - assets/images/morse.jpg
+
+
+    
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
