@@ -31,12 +31,6 @@ class _StartState extends State<Start> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: new FloatingActionButton(
-        child: new Icon(Icons.fullscreen_exit),
-        onPressed: () {
-          Navigator.pushReplacementNamed(context, "/logout");
-        },
-      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -69,9 +63,6 @@ class MyApp extends StatelessWidget {
               caption: TextStyle(fontSize: 22, color: Colors.white),
             ),
             fontFamily: 'Latin'),
-        routes: {
-          "/logout": (_) => new Start(),
-        },
         home: Start());
   }
 }

@@ -17,7 +17,10 @@ class _SelectPageState extends State<SelectPage> {
         } else if (mark == 2) {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => HomeRiskPage()));
-        } else if (mark == 3) {}
+        } else if (mark == 3) {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => CapriniPage()));
+        }
       });
 
   @override
@@ -50,7 +53,7 @@ class _SelectPageState extends State<SelectPage> {
               onChangeAnswer: _onChangeMorseAnswer,
             ),
             AnswerWidget(
-              title: "element.title",
+              title: "Caprini",
               mark: 3,
               onChangeAnswer: _onChangeMorseAnswer,
             ),

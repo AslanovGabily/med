@@ -50,6 +50,176 @@ class QuestionData {
   List<Question> get questions => [..._data];
 }
 
+class CapriniDate {
+  final _data = [
+    Question(title: '1. Возраст 41-60 лет?', answers: [
+      Answer(title: 'да', ball: 1),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(title: '2. Отек нижних конечностей?', answers: [
+      Answer(title: 'да', ball: 1),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(title: '3. ИМТ > 25 кг/м2?', answers: [
+      Answer(title: 'да', ball: 1),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(
+        title: '4. Малое Хирургическое вмешательство (менее 60 мин)?',
+        answers: [
+          Answer(title: 'да', ball: 1),
+          Answer(title: 'нет', ball: 0),
+        ]),
+    Question(title: '5. Сепсис (давностью до 1 месяца)?', answers: [
+      Answer(title: 'да', ball: 1),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(
+        title:
+            '6. Серьезное заболевание лёгких ( в т. ч. пневмония давностью до 1 месяца)?',
+        answers: [
+          Answer(title: 'да', ball: 1),
+          Answer(title: 'нет', ball: 0),
+        ]),
+    Question(title: '7. Прием оральных контрацептивов?', answers: [
+      Answer(title: 'да', ball: 1),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(title: '8. Гормонозаместительная терапия?', answers: [
+      Answer(title: 'да', ball: 1),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(
+        title: '9. Беременность и послеродовой период ( до 1 мес)?',
+        answers: [
+          Answer(title: 'да', ball: 1),
+          Answer(title: 'нет', ball: 0),
+        ]),
+    Question(
+        title:
+            '10. В анамнезе: необъяснимые мертворождения, выкидыши (>2)преждевременные роды с токсикозом или задержка внутриутробного развития?',
+        answers: [
+          Answer(title: 'да', ball: 1),
+          Answer(title: 'нет', ball: 0),
+        ]),
+    Question(title: '11. Острый инфаркт миокарда?', answers: [
+      Answer(title: 'да', ball: 1),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(
+        title:
+            '12. Хроническая сердечная недостаточность ( давностью до 1 месяца)?',
+        answers: [
+          Answer(title: 'да', ball: 1),
+          Answer(title: 'нет', ball: 0),
+        ]),
+    Question(
+        title: '13. Постельный режим у нехирургического пациента?',
+        answers: [
+          Answer(title: 'да', ball: 1),
+          Answer(title: 'нет', ball: 0),
+        ]),
+    Question(
+        title: '14. Воспалительные заболевания толстой кишки в анамнезе?',
+        answers: [
+          Answer(title: 'да', ball: 1),
+          Answer(title: 'нет', ball: 0),
+        ]),
+    Question(
+        title:
+            '15. Большое  хирургическое вмешательство давностью до 1 месяца в анамнезе?',
+        answers: [
+          Answer(title: 'да', ball: 1),
+          Answer(title: 'нет', ball: 0),
+        ]),
+    Question(
+        title: '16. Большое хирургическое вмешательство (более 60мин)?',
+        answers: [
+          Answer(title: 'да', ball: 2),
+          Answer(title: 'нет', ball: 0),
+        ]),
+    Question(title: '17. ХОБЛ?', answers: [
+      Answer(title: 'да', ball: 1),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(title: '18. Артроскопическая хирургия?', answers: [
+      Answer(title: 'да', ball: 2),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(title: '19. Злокачественное новообразование?', answers: [
+      Answer(title: 'да', ball: 2),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(
+        title: '20. Лапароскопическое вмешательство (более 60 мин)?',
+        answers: [
+          Answer(title: 'да', ball: 2),
+          Answer(title: 'нет', ball: 0),
+        ]),
+    Question(title: '21. Постельный режим более 72 часов?', answers: [
+      Answer(title: 'да', ball: 2),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(
+        title: '22. Иммобилизация конечности (давностью до 1 месяца)?',
+        answers: [
+          Answer(title: 'да', ball: 2),
+          Answer(title: 'нет', ball: 0),
+        ]),
+    Question(title: '23. Катетеризация центральных вен?', answers: [
+      Answer(title: 'да', ball: 2),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(title: '24. Личный анамнез ВТЭО?', answers: [
+      Answer(title: 'да', ball: 3),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(title: '25. Семейный анамнез ВТЭО?', answers: [
+      Answer(title: 'да', ball: 3),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(title: '26. Мутация типа Лейден?', answers: [
+      Answer(title: 'да', ball: 3),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(title: '27. Мутация протромбина 2021ОА?', answers: [
+      Answer(title: 'да', ball: 3),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(title: '28. Гипергомоцистеинемия?', answers: [
+      Answer(title: 'да', ball: 3),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(title: '29. Гепарин-индуцированная тромбоцитопения?', answers: [
+      Answer(title: 'да', ball: 3),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(title: '30. Повышенный уровень антител к кардиолепину?', answers: [
+      Answer(title: 'да', ball: 3),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(title: '31. Волчаночный антикоагулянт?', answers: [
+      Answer(title: 'да', ball: 3),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(title: '32. Инсульт (давностью до 1 месяца)?', answers: [
+      Answer(title: 'да', ball: 5),
+      Answer(title: 'нет', ball: 0),
+    ]),
+    Question(
+        title: '32. Множественная травма (давностью до 1 месяца)?',
+        answers: [
+          Answer(title: 'да', ball: 5),
+          Answer(title: 'нет', ball: 0),
+        ]),
+    Question(title: '32. Эндопротезирование крупных суставов?', answers: [
+      Answer(title: 'да', ball: 5),
+      Answer(title: 'нет', ball: 0),
+    ]),
+  ];
+  List<Question> get questions => [..._data];
+}
+
 class MorseScaleDate {
   final _data = [
     Question(title: '1. Падал ли пациент в последние 3 мес?', answers: [

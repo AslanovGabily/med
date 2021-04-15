@@ -136,7 +136,7 @@ class _HomeRiskPageState extends State<HomeRiskPage> {
         decoration: BoxDecoration(
             color: const Color(0xff2a375a),
             image: DecorationImage(
-              image: AssetImage("assets/images/emb.jpg"),
+              image: AssetImage("assets/images/HOR.jpg"),
               fit: BoxFit.cover,
             )),
         child: Column(
@@ -152,7 +152,7 @@ class _HomeRiskPageState extends State<HomeRiskPage> {
                     questionData: data,
                     onChangaAnswer: _onChangeAnswer,
                   )
-                : ResultMorse(total: _countResult, onClearState: _clearState)
+                : Result(total: _countResult, onClearState: _clearState)
           ],
         ),
       ),
@@ -160,15 +160,15 @@ class _HomeRiskPageState extends State<HomeRiskPage> {
   }
 }
 
-class HomePage extends StatefulWidget {
-  HomePage({Key key}) : super(key: key);
+class CapriniPage extends StatefulWidget {
+  CapriniPage({Key key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _CapriniPageState createState() => _CapriniPageState();
 }
 
-class _HomePageState extends State<HomePage> {
-  final MorseScaleDate data = MorseScaleDate();
+class _CapriniPageState extends State<CapriniPage> {
+  final CapriniDate data = CapriniDate();
   int _countResult = 0;
   int _questionIndex = 0;
   var _icon = Icons.brightness_1;
@@ -181,25 +181,10 @@ class _HomePageState extends State<HomePage> {
         _icons = [];
       });
 
-  void _onChangeAnswer(int mark) => setState(() {
-        if (mark == 1) {
+  void _onChangeCapriniAnswer(int mark) => setState(() {
+        if (mark == 0) {
           _icons.add(Icon(_icon, color: Colors.green));
-          _countResult++;
-        } else if (mark == 2) {
-          _icons.add(Icon(_icon, color: Colors.yellow));
-          _countResult += 2;
-        } else if (mark == 4) {
-          _icons.add(Icon(_icon, color: Colors.red));
-          _countResult += 4;
-        }
-        _questionIndex++;
-      });
-
-  void _onChangeMorseAnswer(int mark) => setState(() {
-        if (mark < 15) {
-          _icons.add(Icon(_icon, color: Colors.green));
-          _countResult += mark;
-        } else if (mark >= 15) {
+        } else if (mark > 0) {
           _icons.add(Icon(_icon, color: Colors.red));
           _countResult += mark;
         }
@@ -214,7 +199,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Шкала падения Морзе')),
+      appBar: AppBar(title: Text('Caprini')),
       //appBar: AppBar(title: Text('Шкала падения Морзе Шкала оценки рисков')),
       floatingActionButton: new FloatingActionButton(
         child: new Icon(Icons.fullscreen_exit),
@@ -232,18 +217,20 @@ class _HomePageState extends State<HomePage> {
             )),
         child: Column(
           children: <Widget>[
-            ProgressBar(
-              icons: _icons,
-              count: _questionIndex,
-              total: data.questions.length,
+            Flexible(
+              child: ProgressBarCaprini(
+                icons: _icons,
+                count: _questionIndex,
+                total: data.questions.length,
+              ),
             ),
             _questionIndex < data.questions.length
                 ? Quiz(
                     index: _questionIndex,
                     questionData: data,
-                    onChangaAnswer: _onChangeMorseAnswer,
+                    onChangaAnswer: _onChangeCapriniAnswer,
                   )
-                : ResultMorse(total: _countResult, onClearState: _clearState)
+                : ResultCaprini(total: _countResult, onClearState: _clearState)
           ],
         ),
       ),
