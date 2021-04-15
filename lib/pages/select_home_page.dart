@@ -26,7 +26,7 @@ class _SelectPageState extends State<SelectPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Рагимов красавчик!!!')),
+      appBar: AppBar(title: Text('Рахимов Ахмед Якупович')),
       //appBar: AppBar(title: Text('Шкала падения Морзе Шкала оценки рисков')),
       floatingActionButton: new FloatingActionButton(
         child: new Icon(Icons.fullscreen_exit),
